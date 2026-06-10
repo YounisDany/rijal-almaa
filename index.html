@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="رجال ألمع - قرية تراثية تاريخية في منطقة عسير. اكتشف العمارة الحجرية، فن القط العسيري، والجولات السياحية." />
+  <title>رجال ألمع | وجهة سياحية تراثية</title>
+
+  <!-- خطوط جوجل العربية: Cairo للعناوين و Tajawal للنصوص -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============ شريط التنقل العلوي (Navbar) ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">🏛️</span>
+        <span class="brand-text">رجال ألمع</span>
+      </a>
+
+      <!-- روابط التنقل -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">الرئيسية</a>
+        <a href="#about" class="nav-link">عن القرية</a>
+        <a href="#gallery" class="nav-link">المعرض</a>
+        <a href="#services" class="nav-link">الخدمات</a>
+        <a href="#contact" class="nav-link">تواصل</a>
+      </nav>
+
+      <!-- أدوات يمين الشريط: الوضع الليلي + حساب المستخدم -->
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" title="الوضع الليلي" aria-label="تبديل الوضع الليلي">🌙</button>
+
+        <!-- زر الحساب: يتغير حسب حالة تسجيل الدخول -->
+        <div class="account" id="accountArea">
+          <button class="btn btn-primary btn-sm" id="loginBtn">تسجيل الدخول</button>
+
+          <!-- قائمة المستخدم (تظهر بعد تسجيل الدخول) -->
+          <div class="user-menu" id="userMenu" hidden>
+            <button class="user-chip" id="userChip">
+              <span class="avatar" id="userAvatar">م</span>
+              <span class="user-name" id="userName">مستخدم</span>
+            </button>
+            <div class="dropdown" id="userDropdown" hidden>
+              <p class="dropdown-hello">أهلًا، <strong id="dropdownName">مستخدم</strong> 👋</p>
+              <button class="dropdown-item" id="logoutBtn">تسجيل الخروج</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- زر القائمة للجوال -->
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="القائمة">☰</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ============ القسم الرئيسي (Hero) ============ -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="qatt-strip" aria-hidden="true"></div> <!-- شريط مستوحى من فن القط العسيري -->
+
+    <div class="container hero-content">
+      <span class="hero-badge reveal">منطقة عسير · المملكة العربية السعودية</span>
+      <h1 class="hero-title reveal">قرية رجال ألمع التراثية</h1>
+      <p class="hero-text reveal">
+        قرية تاريخية تتربع على مرتفعات السراة، تروي قصصًا عمرها مئات السنين عبر قصورها الحجرية
+        الشاهقة وفنون القط العسيري الملوّنة. اكتشف عبق التاريخ وجمال الطبيعة في مكانٍ واحد.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#gallery" class="btn btn-primary">اكتشف القرية</a>
+        <a href="#services" class="btn btn-ghost">احجز جولة</a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-down" aria-label="انزل للأسفل">⌄</a>
+  </section>
+
+
+  <!-- ============ عن القرية (About) ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">عن القرية</span>
+        <h2 class="section-title">تراثٌ حيّ بين الجبال</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            تقع <strong>رجال ألمع</strong> في منطقة عسير جنوب غرب المملكة، وتُعدّ من أبرز القرى
+            التراثية التي حافظت على هويتها المعمارية الفريدة. بُنيت قصورها من الحجر والطين والخشب،
+            وارتفعت طوابقها لتصل إلى عدة أدوار، في مشهدٍ يعكس براعة الإنسان في التكيّف مع تضاريس الجبال.
+          </p>
+          <p>
+            اشتهرت القرية بفن <strong>القط العسيري</strong> — وهو فن نقش وزخرفة الجدران بألوان زاهية،
+            وقد سُجّل ضمن قائمة اليونسكو للتراث الثقافي غير المادي. واليوم تحوّلت القرية إلى متحفٍ مفتوح
+            يستقبل الزوار من كل مكان.
+          </p>
+        </div>
+
+        <!-- بطاقات إحصائيات مع عدّاد متحرك -->
+        <div class="stats reveal">
+          <div class="stat-card">
+            <span class="stat-num" data-count="900">0</span>
+            <span class="stat-label">سنة من التاريخ</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-count="60">0</span>
+            <span class="stat-label">قصر حجري</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-count="2270">0</span>
+            <span class="stat-label">متر فوق سطح البحر</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-count="50">0</span>
+            <span class="stat-label">ألف زائر سنويًا</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ المعرض (Gallery) ============ -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">المعرض</span>
+        <h2 class="section-title">لقطات من رجال ألمع</h2>
+        <p class="section-sub">اضغط على أي صورة لعرضها بالحجم الكامل</p>
+      </div>
+
+      <!-- صور حقيقية لقرية رجال ألمع (المصدر: ويكيميديا كومنز) -->
+      <div class="gallery">
+        <figure class="gallery-item reveal">
+          <img src="images/village.jpg" alt="قرية رجال ألمع التراثية" loading="lazy" />
+          <figcaption>القرية الأثرية</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="images/night.jpg" alt="قرية رجال ألمع ليلًا" loading="lazy" />
+          <figcaption>القرية ليلًا</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="images/qatt-art.jpg" alt="فن القط العسيري الملوّن" loading="lazy" />
+          <figcaption>فن القط العسيري</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="images/panorama.jpg" alt="وادي رجال ألمع من الأعلى" loading="lazy" />
+          <figcaption>وادي رجال ألمع</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="images/ruins.jpg" alt="العمارة الحجرية القديمة" loading="lazy" />
+          <figcaption>العمارة الحجرية</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="images/inside.jpg" alt="من داخل البيوت التراثية" loading="lazy" />
+          <figcaption>من داخل البيوت</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ الخدمات (Services) ============ -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">الخدمات</span>
+        <h2 class="section-title">تجارب لا تُنسى</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-icon">🧭</div>
+          <h3>جولات سياحية مرشدة</h3>
+          <p>جولات منظمة بين أزقة القرية وقصورها مع شرحٍ لتاريخ كل معلم.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">🧑‍🏫</div>
+          <h3>مرشدون محليون</h3>
+          <p>مرشدون من أبناء المنطقة يروون لك الحكايات الأصيلة عن المكان.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">🏡</div>
+          <h3>إقامة تراثية</h3>
+          <p>بِت ليلتك في بيوت حجرية مرمّمة تجمع بين الأصالة والراحة.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">🎨</div>
+          <h3>ورش فن القط العسيري</h3>
+          <p>تعلّم الرسم والزخرفة بالألوان الزاهية على يد فنانات القرية.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">🍲</div>
+          <h3>مأكولات شعبية</h3>
+          <p>تذوّق أطباق عسير الأصيلة المحضّرة من منتجات محلية طازجة.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">🎭</div>
+          <h3>تجارب ثقافية</h3>
+          <p>عروض فلكلورية وفعاليات تراثية تعيد إحياء روح الماضي.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ تواصل معنا (Contact) ============ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">تواصل</span>
+        <h2 class="section-title">خطّط لزيارتك</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- معلومات التواصل -->
+        <div class="contact-info reveal">
+          <div class="info-row"><span class="info-ic">📍</span> رجال ألمع، منطقة عسير، السعودية</div>
+          <div class="info-row"><span class="info-ic">📞</span> 920000000</div>
+          <div class="info-row"><span class="info-ic">✉️</span> info@rijalalmaa.sa</div>
+          <div class="info-row"><span class="info-ic">🕒</span> يوميًا من 9 صباحًا حتى 9 مساءً</div>
+        </div>
+
+        <!-- نموذج المراسلة (واجهة فقط) -->
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="cName">الاسم</label>
+            <input type="text" id="cName" placeholder="اكتب اسمك" />
+          </div>
+          <div class="field">
+            <label for="cEmail">البريد الإلكتروني</label>
+            <input type="email" id="cEmail" placeholder="example@mail.com" />
+          </div>
+          <div class="field">
+            <label for="cMsg">رسالتك</label>
+            <textarea id="cMsg" rows="4" placeholder="كيف يمكننا مساعدتك؟"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">إرسال الرسالة</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ التذييل (Footer) ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">🏛️</span>
+        <strong>رجال ألمع</strong>
+        <p>وجهة تراثية تنبض بالتاريخ في قلب عسير.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="#home">الرئيسية</a>
+        <a href="#about">عن القرية</a>
+        <a href="#gallery">المعرض</a>
+        <a href="#services">الخدمات</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="تويتر">𝕏</a>
+        <a href="#" aria-label="إنستغرام">📷</a>
+        <a href="#" aria-label="يوتيوب">▶️</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 رجال ألمع — جميع الحقوق محفوظة. · الصور: علي لاجمي، ريتشارد مورتيل (CC BY 2.0)، وكالة الأنباء السعودية (CC BY-SA 4.0) — عبر ويكيميديا كومنز.</p>
+  </footer>
+
+
+  <!-- ============ شريط التنقل السفلي للجوال (App-style) ============ -->
+  <nav class="bottom-nav">
+    <a href="#home" class="bn-item active"><span>🏠</span><small>الرئيسية</small></a>
+    <a href="#gallery" class="bn-item"><span>🖼️</span><small>المعرض</small></a>
+    <a href="#services" class="bn-item"><span>🧭</span><small>الخدمات</small></a>
+    <a href="#contact" class="bn-item"><span>✉️</span><small>تواصل</small></a>
+    <button class="bn-item" id="bnAccount"><span>👤</span><small>حسابي</small></button>
+  </nav>
+
+
+  <!-- ============ نافذة تسجيل الدخول / التسجيل (Modal) ============ -->
+  <div class="modal" id="authModal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" data-close aria-label="إغلاق">✕</button>
+
+      <h2 class="modal-title" id="authTitle">مرحبًا بك</h2>
+
+      <!-- تبويبات: دخول / تسجيل -->
+      <div class="tabs">
+        <button class="tab active" data-tab="login">تسجيل الدخول</button>
+        <button class="tab" data-tab="register">حساب جديد</button>
+      </div>
+
+      <!-- نموذج تسجيل الدخول -->
+      <form class="auth-form" id="loginForm" data-form="login" novalidate>
+        <div class="field">
+          <label for="loginEmail">البريد الإلكتروني</label>
+          <input type="email" id="loginEmail" placeholder="example@mail.com" autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="loginPass">كلمة المرور</label>
+          <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password" />
+        </div>
+        <p class="form-error" id="loginError"></p>
+        <button type="submit" class="btn btn-primary btn-block">دخول</button>
+      </form>
+
+      <!-- نموذج إنشاء حساب -->
+      <form class="auth-form" id="registerForm" data-form="register" hidden novalidate>
+        <div class="field">
+          <label for="regName">اسم المستخدم</label>
+          <input type="text" id="regName" placeholder="اسمك" autocomplete="username" />
+        </div>
+        <div class="field">
+          <label for="regEmail">البريد الإلكتروني</label>
+          <input type="email" id="regEmail" placeholder="example@mail.com" autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="regPass">كلمة المرور</label>
+          <input type="password" id="regPass" placeholder="6 أحرف على الأقل" autocomplete="new-password" />
+        </div>
+        <p class="form-error" id="regError"></p>
+        <button type="submit" class="btn btn-primary btn-block">إنشاء الحساب</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ============ صندوق الإضاءة لعرض الصور (Lightbox) ============ -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق">✕</button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
+
+  <!-- ============ زر العودة للأعلى ============ -->
+  <button class="to-top" id="toTop" aria-label="العودة للأعلى" hidden>↑</button>
+
+
+  <!-- ============ حاوية التنبيهات (Toasts) ============ -->
+  <div class="toast-wrap" id="toastWrap"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
